@@ -37,6 +37,8 @@ function searchMovie()
 {
     $('#movie-cards').html('')
 
+    let resultText = `<h1 class="text-gray-400 text-2xl"><i class="bi bi-lightbulb"></i> Search Result for <span class="text-red-400">'${$('#search-keyword').val()}'</span></h1>`
+
     $.ajax({
         url: 'http://www.omdbapi.com',
         type: 'get',
@@ -55,10 +57,14 @@ function searchMovie()
                     content += showMovies(data)
                 })
 
+                $('.result-text').html(resultText)
+
                 $('.movie-cards').html(content)
                 $('.text-error').html('')
                 
             } else {
+                $('.result-text').html(resultText)
+
                 $('.movie-cards').html('')
                 $('.text-error').html('Movie Not Found')
             }

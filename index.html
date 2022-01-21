@@ -25,13 +25,15 @@
             <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-gray-600 focus:outline-none" placeholder="Search Movie Here..." id="search-keyword">
             <button class="btn inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-blue-600 hover:text-white focus:outline-none focus:ring-0 transition duration-150 ease-in-out" type="button" id="search-btn">Search</button>
           </div>
+          <div class="result-text"></div>
         </div>
       </div>
+
 
       <div class="border-gray-300 mt-7">
         <h1 class="text-error text-gray-300 text-6xl mt-5"></h1>
 
-        <div class="grid grid-cols-3 mx-20 gap-4 movie-cards"></div>
+        <div class="grid m-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-20 gap-4 movie-cards"></div>
 
         <!-- Movie cards -->
       </div>
